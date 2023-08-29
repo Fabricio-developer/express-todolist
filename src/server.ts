@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 import cors from 'cors';
 
 const routes = require('./routes/routes');
+const todo = require('./routes/todoRoute');
 
 // DB connection
 require('dotenv').config();
@@ -27,7 +28,7 @@ app.use(express.json());
 
 // Routing
 
-app.use('/api', routes)
+app.use('/api', [routes, todo])
 
 app.listen(3001, () => console.log("Server is running at http://localhost:3001"))
 
