@@ -9,7 +9,7 @@ router
   .post(todoController.createTodo);
 
   router
-    .route("/todos/:todoId")
+    .route("/todos/:id")
     .get(todoController.getTodoById)
     .put(todoController.updateTodo)
     .delete(todoController.deleteTodo);
